@@ -1,0 +1,112 @@
+---
+title: "Presidential Tweets, Past and Present"
+author: "Betty, Ilya, Isan, Trey"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("Section_2_analysis.R")
+library('knitr') 
+```
+
+## Section 1. Problem Domain Description
+
+The domain of the issue investigated is the social media platform "Twitter" and "tweets" made by President Donald Trump and former President Barack Obama.
+
+Twitter is a social media platform that allows people to send out short messages called "tweets", accompanied by pictures and other small links to their "followers", people
+who willingly choose to get updates on new tweets from a person. As Presidents of the US, Obama and Trump have an extremely large amount of followers. Tweets often contain
+personal opinions and comments on current societal matters, particularly in the case of the President of the United States for obvious reasons.
+
+But why should anyone care? For the same reasons listed above - tweets will often contain the personal views and sentiments of the person making them. It is incredibly important
+that every member of the United States of America knows what their President is like, and what that person thinks of the current issues that plague society. Maybe they ignore
+issues that every American finds important, maybe they pay attention to them, etc. 
+
+### Section 1.1 Critical Analysis Questions
+
+Of course, when given such a breadth of data, one should be able to concisely ask the cutting questions. Here's what we came up with:
+
+1. What does the general reception to the tweets, with a baseline of average likes and favorites/retweets between them, say about the president making them and the people liking them? Given that        Obama and Trump come from quite literally the opposite sides of the political spectrum, this should say a lot about what the reception of the US to each president and the general
+  beliefs of the people in the country that we live in.
+
+2. How seriously is the president taking his job? That is, what percentage of the tweets are actually about issues/policy in the United States? What percentage are insults? etc.
+  This is an obviously important question to ask - he's literally the leader of the US, it's important that a president focuses more on policy rather than the media.
+
+3. What kind of personality does the president have? Does he tend to keep his tweets neutral and level-headed, or does he respond with emotionally evoking pathos in most of his tweets?
+
+4. How often do the presidents interact with their followers? Do they retweet any messages from their followers? Do they directly reply to questions or stay ambivalent?
+
+## Section 2 Data Description 
+
+Taking a closer look at the actual data sets, below we will explore what the data sets consist of on the surface level, by defining terms and summarizing the overview of the data sets. 
+
+1. The data sets show Donald Trump and Barack Obama's tweets with a description of the tweet, the date and time, favorites, and retweets. The Donald Trump data set is from the Twitter database website where we got access through an API key: [Trump Tweets](https://developer.twitter.com/en/docs/tweets/search/overview). 
+```{section 2 trump, echo = FALSE}
+kable(sample_trump_df)
+```
+2. The Barack Obama data set is from the database website Periscope updated one year ago by a user name Sean Cook. Here is a link to the source: [Obama Tweets](https://community.periscopedata.com/t/x1fy7p/barack-obamas-tweet-history)
+```{section 2 obama, echo = FALSE}
+kable(sample_obama_df)
+```
+
+#### Definitions
+* Tweet Text: The actual content of the text by each president during their presidential term. 
+* Date: The date each president posted the tweet.
+* Favorites: The number of times people that favorited the tweet, signifying that they liked or agreed with the tweet. 
+* Retweets: The number of times the tweet was reposted or forwarded by people. This feature help share and spread the tweet around with people's own followers. 
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Section 4 Proposed Data Presentation
+
+### Question 1
+To provide a better perspective on how to compare how the general public 
+responds favorably to the tweets from both figures, the top 10 tweets in terms of likes 
+can be displayed in the form of a scatter plot, where the x-value will
+be organizized from the top ten liked tweets, from largest to lowest. The y-value
+will be the number of likes. Both the likes from the Obama dataset and the Trump
+dataset will be included to compare the results to identify which figure 
+tends to have a larger favorability because scatter plots makes it easy 
+to compare values. The colors of the points are different between the two presidents to indicate who's data represents who
+
+![]("Example Data Visualization/Question_1.png ")
+
+### Question 2
+In regards to identifying the percentage of tweets about policy and issues in regards
+to insults. We can filter the data to search for important public policies, and calculate
+the percentage of tweets that relate to that and compare it with the total amount of tweets.
+To visualize this, we can create a bar graph to illustrate the total amount of tweets and the number that are only about policies. To get the percentage, you would just have to divide the policy tweets by the total tweets by 100. The x-value is the total number of tweets, and the y-value is the different categories of tweets. Each column is colored differently and labeled. 
+
+![]("Example Data Visualization/Question_2.png ")
+
+### Question 3
+To have a better understanding of how the president's personality and how they react to situations, we can filter using a list of emotionally provoking words such as "great", "fear", "outrageous", and categorize them by emotion to identify what percentage of tweets indicates what emotion. The visual display would be a bar graph to easily display a comparison of the different number of tweets related to each emotion. The x-values are the emotions, the y-values would be the number of tweets. Each bar is the same color but each column is labelled to indicate which emotion.
+
+![]("Example Data Visualization/Question_3.png ")
+
+### Question 4
+In order to answer this question, we need to identify which tweets are retweets and which
+"@" directly at another twitter handle indicating interaction between the two accounts. By 
+filtering for those, we can then compare the tweets we have selected with the total
+number of tweets within a pie chart, to see the proportion of tweets that the presidents
+retweet and the proportion of tweets used to reply to others. Each section of the pie charts are colored differently and labeled with a key to indicate what each category represents.
+
+![]("Example Data Visualization/Question_4.1.png ")
+
+![]("Example Data Visualization/Question_4.2.png ")
+
+
+
+
