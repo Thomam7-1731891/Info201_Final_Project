@@ -26,12 +26,16 @@ issues that every American finds important, maybe they pay attention to them, et
 
 Of course, when given such a breadth of data, one should be able to concisely ask the cutting questions. Here's what we came up with:
 
+# Betty
 1. What does the general reception to the tweets, with a baseline of average likes and favorites/retweets between them, say about the president making them and the people liking them? Given that Obama and Trump come from quite literally the opposite sides of the political spectrum, this should say a lot about what the reception of the US to each president and the general beliefs of the people in the country that we live in.
 
-2. One thing that President Trump is known for is using the phrase "Make America Great Again", and he often uses simple language to preach his messages to his followers. But how often does he tweet things like this? Let's look at how often he uses the word "Great" in his tweets in comparison to the total amount of tweets he posts.
-  
+# Trey
+2. One thing that President Trump is known for is using the phrase "Make America Great Again", and he often uses simple language to preach his messages to his followers. But how often does he tweet things like this? Let's look at how often he uses certain phrases in his tweets in comparison to the total amount of tweets he posts. Ex. #MakeAmericaGreatAgain, #crookedHilary, 
+
+# Isan
 3. how do the presidents portray their image to their folowers? Do they tend to keep their tweets neutral and level-headed, or do they respond with emotionally evoking pathos in most of their tweets? 
 
+# Ilya
 4. How often do the presidents interact with the public over Twitter? Do they retweet any messages from their followers? Do they directly reply to questions? We can interpret how engaged the presidents are by finding the percentages of tweets that are retweets, responses, in comparison to the amount of all tweets, and then compare the two presidents with each other.
 
 ## Section 2 Data Description 
