@@ -1,4 +1,4 @@
-Final Project analysis.
+#Final Project analysis.
 
 library("httr")
 library("jsonlite")
@@ -118,3 +118,4 @@ Obama_text_Im <- Obama_data %>%
 Obama_rate <- ((nrow(Obama_text_I) + nrow(Obama_text_my) + nrow(Obama_text_Im))/nrow(Obama_data))*100
 
 Trump_rate <- ((nrow(Trump_text_I) + nrow(Trump_text_my) + nrow(Trump_text_Im))/nrow(Trump_data))*100
+
